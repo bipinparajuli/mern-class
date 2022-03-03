@@ -1,0 +1,19 @@
+Variables, Operators and Expression
+    - Variable Decleration in JS
+    - Operator & Expression in JS
+    - Ternary Operator in JS
+    - Object Desctructuring & Spread Operator
+    - QNA
+
+Functions
+    - Function Decleration in JS
+    - Arrow Function
+    - Higher Order Function
+    - Map, Reduce & Filter
+    - QNA
+
+Class in JavaScript
+Inheritance
+Prototype
+Closure
+Common Interview Question
