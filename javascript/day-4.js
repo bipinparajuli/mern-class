@@ -84,6 +84,7 @@ function b(){
             console.log(a);
         }
 d()
+
 }
 c()
 
@@ -118,9 +119,10 @@ console.log(JSON.parse(newex).name);
 
 function fun(){
     let a =10;
-    return function fun1(){
+    return 10
+    // return function fun1(){
 //   sadsa
-        console.log("Hello");
+        // console.log("Hello");
     }
 }
 
