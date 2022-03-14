@@ -5,7 +5,8 @@
 // console.log("Hello World")
 
 const fs = require("fs");
-
+const path = require("path");
+const http = require("http")
 // fs.readFile('myfirstnodemodule.mjs','utf8',(err,data)=>{
 //     if(err) console.log("ERROR",err);
 
@@ -45,18 +46,49 @@ fs.rmdir('home',(err,data)=>{
 //append 
 //open
 
-const os = require('os')
+// const os = require('os')
+// const path = require('path')
 
-let arc=os.arch()
+// let arc=os.arch()
 
-console.log(arc);
+// console.log(arc);
 
-console.log("PLATFROM ==>",os.platform());
-console.log("MEMEORY ==>",os.freemem());
-console.log(os.cpus());
-console.log(os.hostname());
-console.log(os.type());
-console.log(os.userInfo());
+// console.log("PLATFROM ==>",os.platform());
+// console.log("MEMEORY ==>",os.freemem());
+// console.log(os.cpus());
+// console.log(os.hostname());
+// console.log(os.type());
+// console.log(os.userInfo());
 
 
 // console.log(os.networkInterfaces());
+
+console.log(path.basename("/html/index.html"))
+console.log(path.basename("app.js"))
+
+//it gives directory in which file lies
+console.log(path.dirname("/html/index.html"))
+
+//gives extension of file system
+console.log(path.extname("/html/index.html"))
+
+console.log(path.extname("app.js"))
+
+console.log(path.join('newpath','app.js'))
+
+const PORT =8000;
+
+http.createServer((req,res)=>{
+
+    fs.readFileSync("index.html",'utf8',(err,data)=>{
+        res.write(data)
+    res.end()
+    })
+
+    
+
+}).listen(8000,()=>{
+    console.log(`Server running in port ${PORT}`)
+})
+
+
