@@ -69,3 +69,18 @@ app.use((err,req,res,next)=>{
 app.listen(8001,()=>{
     console.log("Server is running at port 8001")
 })
+
+// SUCCESS
+{
+    status:200,
+    data:[{}.{}],
+    hasSucess:true
+
+}
+//Error
+{
+ status:400,
+ error:"API Error",
+ hasError:true
+
+}
