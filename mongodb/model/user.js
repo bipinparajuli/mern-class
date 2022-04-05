@@ -3,7 +3,12 @@ const Schema = mongoose.Schema;
 
 //creating a schema
 var userSchema = new Schema({
-    name:String
+    name:String,
+    age:Number,
+    images:{
+        data:Buffer,
+        contentType:String
+    }
 }) 
 
 //creating a model
