@@ -58,10 +58,12 @@ route.post('/post',(req,res)=>{
 })
 
 route.get("/getpost/:id",(req,res)=>{
-    User.findOne((err,data)=>{
+    User.findById(req.params.id,(err,data)=>{
         if(err) console.log(err);
 
         else{
+            console.log(data);
+            res.set("Content-Type",data.images.contentType)
             res.send(data.images.data)
         }
     })
