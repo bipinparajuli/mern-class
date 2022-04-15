@@ -1,10 +1,21 @@
 import React from 'react'
+import './Card.css'
+import Image from './Image'
+const Card = (props) => {
 
-const Card = () => {
+  const styles ={
+    color:"red"
+  }
+
   return (
-    <div>
-        <h1>CARD</h1>
-    </div>
+    <div class="card" style={{width:"18rem",margin:"50px"}}>
+    <Image />
+    <div class="card-body">
+    <h5 class="card-title">{props.name}</h5>
+    <p class="card-text">{props.des}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
   )
 }
 
