@@ -49,26 +49,28 @@ function add(){
 // arr = ["hello","hi"]
 return (
     <div className="App">
+
+      
       {/* <input  */}
       {/* onChange={handleChange} */}
       {/* /> */}
       {/* <h6>I'm {state}</h6> */}
       {/* {state?<button onClick={handleChange} >Login</button>:<button>Loading . . .</button>} */}
-      <h1>{state.title}</h1>
+      {/* <h1>{state.title}</h1> */}
 
-    <input
+    {/* <input
       // value={state}
     onChange={(event)=>{
       // setState(event.target.value)
     }}
 
-    />
-    <button onClick={handleClick} >Add</button>
+    /> */}
+    {/* <button onClick={handleClick} >Add</button>
     {arr.map((data,i)=>(
       <div key={i}>
       <p>{data}</p><button>Delete</button>
       </div>
-    ))}
+    ))} */}
     </div>
   );
 }
