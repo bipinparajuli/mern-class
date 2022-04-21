@@ -1,54 +1,33 @@
-import React,{useState,useEffect} from 'react';
-import './App.css';
+import React from 'react';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import About from './Component/About';
+import ContactUs from './Component/ContactUs';
+
+import Home from './Component/Home'
+import Login from './Component/Login';
+import Navbar from './Component/Navbar';
+import NotFound from './Component/NotFound';
+
 
 function App() {
 
-  const [state,setState] = useState([])
-
-  useEffect(()=>{
-
-    fetch('https://www.fakerestapi.com/datasets/api/v1/movie-details-dataset.json')
-    .then(response => response.json())
-    .then(json => {
-      setState(json.data)
-    })
-
-  },[])
-
-
-
-
   return (
-    <div className="App">
-      <h1 style={{textAlign:"center",marginTop:"50px"}} >Popular Movie Website !!!</h1>
+   <BrowserRouter>
+      <Navbar />   
 
-    <div className='movie-container'style={{display:"flex",flexWrap:"wrap",justifyContent:"center"}} >
-      {
-  state.length == 0 ?
-   <div class="spinner-border text-primary" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div> : state.map(data=>{
-  
-      console.log(data);
-      
-      return(
-        <div class="card" style={{width:"18rem",margin:"20px"}}>
-        <img src={data.poster} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">{data.title}</h5>
-          <p class="card-text">{data.description.slice(0,100)}</p>
-          <a href={data.url} class="btn btn-primary">Go somewhere</a>
-        </div>
-        </div>
-      )
-    })  
-    
-  
-}
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<ContactUs />} />
+        <Route path='/profile/:id' element={<About />} />
+        <Route path="*" element={<NotFound />} />
 
-    </div>
+      </Routes>
 
-    </div>
+
+   </BrowserRouter>
+
   );
 }
 
