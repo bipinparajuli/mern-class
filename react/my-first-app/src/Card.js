@@ -9,7 +9,9 @@ const Card = (props) => {
 
   return (
     <div class="card" style={{width:"18rem",margin:"50px"}}>
-    <Image />
+    <Image
+    imgUrl = {props.imgUrl}
+    />
     <div class="card-body">
     <h5 class="card-title">{props.name}</h5>
     <p class="card-text">{props.des}</p>

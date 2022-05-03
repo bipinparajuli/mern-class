@@ -3,6 +3,7 @@ import Card from './Card';
 import Image from './Image';
 import Nab from './Nab';
 import ButtonComponent from './SecondComponent'
+import Addidas from './a.jpg'
 
 let title = "React Class"
 
@@ -83,6 +84,7 @@ function handleClick(a){
              <Card 
       name={i.name} 
       des={i.price}
+      imgUrl = {Addidas}
       />
         // {/* <button onClick={(e)=>handleClick(i.name)} >Click me</button> hanling click event with passing parameters */}
 
